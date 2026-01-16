@@ -16,7 +16,8 @@ connectToMongoDB(process.env.MONGODB_URI)
     
 })
 
-app.use(express.json())
+app.set("view engine", "ejs");
+app.use(express.json());
 
 app.use("/url", urlRoute);
 
